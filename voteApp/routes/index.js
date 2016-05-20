@@ -1,8 +1,11 @@
 
+const router = require('express').Router();
 /*
  * GET home page.
  */
+router.get('/', (req, res, next)=>{
+  res.render('layout'); //render layout.html
+});
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' })
-};
+
+module.exports = router;
