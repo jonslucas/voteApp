@@ -1,11 +1,11 @@
+module.exports = (app)=>{
+  const base = require('./base/base'),
+       admin = require('./admin/admin'),
+       polls = require('./polls/polls'),
+         api = require('./api/api');
 
-const router = require('express').Router();
-/*
- * GET home page.
- */
-router.get('/', (req, res, next)=>{
-  res.render('layout'); //render layout.html
-});
-
-
-module.exports = router;
+    base(app);
+    admin(app);
+    polls(app);
+    api(app);
+};
